@@ -7,7 +7,12 @@
 
 namespace Samerior\LaravelSidebar\Library\Core;
 
+use Illuminate\Contracts\Container\Container;
+use Illuminate\Support\Collection;
+use Samerior\LaravelSidebar\Contracts\Append;
+use Samerior\LaravelSidebar\Contracts\Badge;
 use Samerior\LaravelSidebar\Contracts\Item;
+use Samerior\LaravelSidebar\Exceptions\LogicException;
 use Samerior\LaravelSidebar\Traits\AuthorizableTrait;
 use Samerior\LaravelSidebar\Traits\CacheableTrait;
 use Samerior\LaravelSidebar\Traits\CallableTrait;
@@ -123,6 +128,7 @@ class DefaultItem implements Item, \Serializable
      * @param int $weight
      *
      * @return Item
+     * @throws LogicException
      */
     public function weight($weight)
     {
@@ -188,12 +194,13 @@ class DefaultItem implements Item, \Serializable
      * @param string|null $className
      *
      * @return Badge
+     * @throws \ReflectionException
      */
     public function badge($callbackOrValue = null, $className = null)
     {
-        $badge = $this->container->make('Maatwebsite\Sidebar\Badge');
+        $badge = $this->container->make(Badge::class);
 
-        if (is_callable($callbackOrValue)) {
+        if (\is_callable($callbackOrValue)) {
             $this->call($callbackOrValue, $badge);
         } elseif ($callbackOrValue) {
             $badge->setValue($callbackOrValue);
@@ -234,10 +241,11 @@ class DefaultItem implements Item, \Serializable
      * @param null $name
      *
      * @return Append
+     * @throws \ReflectionException
      */
     public function append($callbackOrRoute = null, $icon = null, $name = null)
     {
-        $append = $this->container->make('Maatwebsite\Sidebar\Append');
+        $append = $this->container->make(Append::class);
 
         if (is_callable($callbackOrRoute)) {
             $this->call($callbackOrRoute, $append);

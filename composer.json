@@ -1,5 +1,5 @@
 {
-    "name": "samerior/sidebar",
+    "name": "samerior/laravel-sidebar",
     "type": "library",
     "description": "A Laravel Sidebar generator",
     "keywords": [

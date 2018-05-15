@@ -3,6 +3,7 @@
 namespace Samerior\LaravelSidebar\Infrastructure;
 
 use Illuminate\Contracts\Cache\Repository as Cache;
+use Samerior\LaravelSidebar\Contracts\SidebarFlusher;
 
 /**
  * Class StaticSidebarFlusher

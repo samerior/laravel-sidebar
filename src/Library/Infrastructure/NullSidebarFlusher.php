@@ -1,6 +1,9 @@
 <?php
 
 namespace Samerior\LaravelSidebar\Infrastructure;
+
+use Samerior\LaravelSidebar\Contracts\SidebarFlusher;
+
 /**
  * Class NullSidebarFlusher
  * @package Samerior\LaravelSidebar\Infrastructure

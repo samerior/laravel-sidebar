@@ -5,12 +5,9 @@
  * Company      : Samerior Group
  */
 
-namespace Samerior\LaravelSidebar\Events;
+namespace Samerior\LaravelSidebar\Contracts;
 
-/**
- * Interface ShouldFlushCache
- * @package Samerior\LaravelSidebar\Events
- */
+
 interface ShouldFlushCache
 {
 

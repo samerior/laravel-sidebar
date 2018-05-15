@@ -4,6 +4,7 @@ namespace Samerior\LaravelSidebar\Infrastructure;
 
 use Illuminate\Contracts\Cache\Repository as Cache;
 use Illuminate\Contracts\Config\Repository as Config;
+use Samerior\LaravelSidebar\Contracts\SidebarResolver;
 
 /**
  * Class StaticCacheResolver

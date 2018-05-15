@@ -4,15 +4,15 @@ namespace Samerior\LaravelSidebar\Tests\Traits;
 
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Routing\UrlGenerator;
-use Samerior\LaravelSidebar\Traits\RouteableTrait;
+use Samerior\LaravelSidebar\Tests\SidebarTestCase;
+use Samerior\LaravelSidebar\Tests\Stubs\StubRouteableClass;
 
-class RouteableTraitTest extends PHPUnit_Framework_TestCase
+/**
+ * Class RouteableTraitTest
+ * @package Samerior\LaravelSidebar\Tests\Traits
+ */
+class RouteableTraitTest extends SidebarTestCase
 {
-    /**
-     * @var Container
-     */
-    protected $container;
-
     /**
      * @var StubItemableClass
      */
@@ -20,7 +20,7 @@ class RouteableTraitTest extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->container = \Mockery::mock(Container::class);
+        $this->setContainer();
         $this->routeable = new StubRouteableClass($this->container);
     }
 
@@ -44,20 +44,3 @@ class RouteableTraitTest extends PHPUnit_Framework_TestCase
     }
 }
 
-class StubRouteableClass
-{
-    use RouteableTrait;
-
-    /**
-     * @var Container
-     */
-    private $container;
-
-    /**
-     * @param Container $container
-     */
-    public function __construct(Container $container)
-    {
-        $this->container = $container;
-    }
-}

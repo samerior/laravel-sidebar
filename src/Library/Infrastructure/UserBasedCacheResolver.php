@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Cache\Repository as Cache;
 use Illuminate\Contracts\Config\Repository as Config;
 use Samerior\LaravelSidebar\Contracts\Sidebar;
+use Samerior\LaravelSidebar\Contracts\SidebarResolver;
 
 /**
  * Class UserBasedCacheResolver

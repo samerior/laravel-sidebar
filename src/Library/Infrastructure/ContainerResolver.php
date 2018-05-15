@@ -4,6 +4,7 @@ namespace Samerior\LaravelSidebar\Infrastructure;
 
 use Illuminate\Contracts\Container\Container;
 use Samerior\LaravelSidebar\Contracts\Sidebar;
+use Samerior\LaravelSidebar\Contracts\SidebarResolver;
 use Samerior\LaravelSidebar\Exceptions\LogicException;
 
 /**

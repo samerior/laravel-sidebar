@@ -7,6 +7,7 @@ use Mockery as m;
 use Samerior\LaravelSidebar\Contracts\Append;
 use Samerior\LaravelSidebar\Library\Core\DefaultAppend;
 use Samerior\LaravelSidebar\Tests\SidebarTestCase;
+use Samerior\LaravelSidebar\Tests\Stubs\StubAppend;
 
 /**
  * Class DefaultAppendTest
@@ -14,8 +15,6 @@ use Samerior\LaravelSidebar\Tests\SidebarTestCase;
  */
 class DefaultAppendTest extends SidebarTestCase
 {
-    protected $container;
-
     /**
      * @var DefaultAppend
      */

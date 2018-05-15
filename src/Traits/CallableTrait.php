@@ -27,7 +27,7 @@ trait CallableTrait
      * @return $this
      * @throws \ReflectionException
      */
-    public function call(\Closure $callback = null, $caller = null)
+    public function call($callback = null, $caller = null)
     {
         if ($callback instanceof \Closure) {
             // Make dependency injection possible

@@ -2,21 +2,18 @@
 
 namespace Samerior\LaravelSidebar\Tests\Traits;
 
-use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\Collection;
 use Samerior\LaravelSidebar\Contracts\Item;
-use Samerior\LaravelSidebar\Contracts\Itemable;
 use Samerior\LaravelSidebar\Library\Core\DefaultItem;
-use Samerior\LaravelSidebar\Traits\CallableTrait;
-use Samerior\LaravelSidebar\Traits\ItemableTrait;
+use Samerior\LaravelSidebar\Tests\SidebarTestCase;
+use Samerior\LaravelSidebar\Tests\Stubs\StubItemableClass;
 
-class ItemableTraitTest extends \PHPUnit_Framework_TestCase
+/**
+ * Class ItemableTraitTest
+ * @package Samerior\LaravelSidebar\Tests\Traits
+ */
+class ItemableTraitTest extends SidebarTestCase
 {
-    /**
-     * @var Container
-     */
-    protected $container;
-
     /**
      * @var StubItemableClass
      */
@@ -24,7 +21,7 @@ class ItemableTraitTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->container = \Mockery::mock(Container::class);
+        $this->setContainer();
         $this->itemable = new StubItemableClass($this->container);
     }
 
@@ -90,21 +87,3 @@ class ItemableTraitTest extends \PHPUnit_Framework_TestCase
     }
 }
 
-class StubItemableClass implements Itemable
-{
-    use ItemableTrait, CallableTrait;
-
-    /**
-     * @var Container
-     */
-    private $container;
-
-    /**
-     * @param Container $container
-     */
-    public function __construct(Container $container)
-    {
-        $this->container = $container;
-        $this->items = new Collection();
-    }
-}

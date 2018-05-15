@@ -2,12 +2,12 @@
 
 namespace Samerior\LaravelSidebar\Tests\Core;
 
-use Mockery as m;
-use Illuminate\Contracts\Container\Container;
 use Samerior\LaravelSidebar\Contracts\Badge;
 use Samerior\LaravelSidebar\Library\Core\DefaultBadge;
+use Samerior\LaravelSidebar\Tests\SidebarTestCase;
+use Samerior\LaravelSidebar\Tests\Stubs\StubBadge;
 
-class DefaultBadgeTest extends \PHPUnit_Framework_TestCase
+class DefaultBadgeTest extends SidebarTestCase
 {
 
     protected $container;
@@ -19,7 +19,7 @@ class DefaultBadgeTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->container = m::mock(Container::class);
+        $this->setContainer();
         $this->badge = new DefaultBadge($this->container);
     }
 
@@ -61,8 +61,4 @@ class DefaultBadgeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('value', $unserialized->getValue());
         $this->assertEquals('class', $unserialized->getClass());
     }
-}
-
-class StubBadge extends DefaultBadge implements Badge
-{
 }

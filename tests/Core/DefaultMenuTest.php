@@ -2,21 +2,17 @@
 
 namespace Samerior\LaravelSidebar\Tests\Core;
 
-use Mockery as m;
-use Illuminate\Contracts\Container\Container;
+
+use Illuminate\Support\Collection;
 use Samerior\LaravelSidebar\Contracts\Group;
 use Samerior\LaravelSidebar\Contracts\Menu;
 use Samerior\LaravelSidebar\Library\Core\DefaultGroup;
 use Samerior\LaravelSidebar\Library\Core\DefaultMenu;
-use Illuminate\Support\Collection;
+use Samerior\LaravelSidebar\Tests\SidebarTestCase;
+use Samerior\LaravelSidebar\Tests\Stubs\StubMenu;
 
-class DefaultMenuTest extends \PHPUnit_Framework_TestCase
+class DefaultMenuTest extends SidebarTestCase
 {
-    /**
-     * @var Container
-     */
-    protected $container;
-
     /**
      * @var DefaultMenu
      */
@@ -24,18 +20,19 @@ class DefaultMenuTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->container = m::mock(Container::class);
+        $this->setContainer();
         $this->menu = new DefaultMenu($this->container);
     }
 
-    public function test_can_instantiate_new_menu()
+    /** @test */
+    public function can_instantiate_new_menu()
     {
         $menu = new DefaultMenu($this->container);
-
         $this->assertInstanceOf(Menu::class, $menu);
     }
 
-    public function test_can_have_custom_menus()
+    /** @test */
+    public function can_have_custom_menus()
     {
         $menu = new StubMenu($this->container);
 
@@ -143,7 +140,7 @@ class DefaultMenuTest extends \PHPUnit_Framework_TestCase
 
     protected function mockContainerMake($name = null, $weight = null)
     {
-        $mock = m::mock(Group::class);
+        $mock = app(Group::class);
         $mock->shouldReceive('name');
         $mock->shouldReceive('getName')->andReturn($name);
         $mock->shouldReceive('getWeight')->andReturn($weight);
@@ -156,6 +153,3 @@ class DefaultMenuTest extends \PHPUnit_Framework_TestCase
     }
 }
 
-class StubMenu extends DefaultMenu
-{
-}

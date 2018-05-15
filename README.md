@@ -1,4 +1,4 @@
-# laravel-sidebar
+# Laravel Sidebar
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -7,22 +7,8 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```Samuel Dervis``` ```samerior``` ```https://www.samerior.com``` ```sam@samerior.com``` ```samerior``` ```laravel-sidebar``` ```A Laravel Sidebar generator``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
+This is a Laravel Sidebar generator with authentication and works nicely with Bootstrap
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
-
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practices by being named the following.
-
-```
-bin/        
-config/
-src/
-tests/
-vendor/
-```
 
 
 ## Install
@@ -32,12 +18,18 @@ Via Composer
 ``` bash
 $ composer require samerior/laravel-sidebar
 ```
+## Assets
 
-## Usage
+To publish the default views use:
 
-``` php
-$skeleton = new Samerior\LaravelSidebar();
-echo $skeleton->echoPhrase('Hello, League!');
+```php
+php artisan vendor:publish --tag="views"
+```
+
+To publish the config use:
+
+```php
+php artisan vendor:publish --tag="config"
 ```
 
 ## Change log

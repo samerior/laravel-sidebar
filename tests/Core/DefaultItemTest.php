@@ -2,21 +2,23 @@
 
 namespace Samerior\LaravelSidebar\Tests\Core;
 
+use Illuminate\Support\Collection;
 use Mockery as m;
 use Samerior\LaravelSidebar\Contracts\Append;
 use Samerior\LaravelSidebar\Contracts\Badge;
 use Samerior\LaravelSidebar\Contracts\Item;
+use Samerior\LaravelSidebar\Library\Core\DefaultAppend;
+use Samerior\LaravelSidebar\Library\Core\DefaultBadge;
 use Samerior\LaravelSidebar\Library\Core\DefaultItem;
-use Illuminate\Contracts\Container\Container;
-use Illuminate\Support\Collection;
+use Samerior\LaravelSidebar\Tests\SidebarTestCase;
+use Samerior\LaravelSidebar\Tests\Stubs\StubItem;
 
-class DefaultItemTest extends \PHPUnit_Framework_TestCase
+/**
+ * Class DefaultItemTest
+ * @package Samerior\LaravelSidebar\Tests\Core
+ */
+class DefaultItemTest extends SidebarTestCase
 {
-    /**
-     * @var Container
-     */
-    protected $container;
-
     /**
      * @var DefaultItem
      */
@@ -24,7 +26,7 @@ class DefaultItemTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->container = m::mock(Container::class);
+        $this->setContainer();
         $this->item = new DefaultItem($this->container);
     }
 
@@ -168,6 +170,3 @@ class DefaultItemTest extends \PHPUnit_Framework_TestCase
     }
 }
 
-class StubItem extends DefaultItem
-{
-}

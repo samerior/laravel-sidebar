@@ -2,19 +2,15 @@
 
 namespace Samerior\LaravelSidebar\Tests\Core;
 
-use Mockery as m;
-use Illuminate\Contracts\Container\Container;
+use Illuminate\Support\Collection;
 use Samerior\LaravelSidebar\Contracts\Group;
 use Samerior\LaravelSidebar\Library\Core\DefaultGroup;
-use Illuminate\Support\Collection;
 use Samerior\LaravelSidebar\Library\Core\DefaultItem;
+use Samerior\LaravelSidebar\Tests\SidebarTestCase;
+use Samerior\LaravelSidebar\Tests\Stubs\StubGroup;
 
-class DefaultGroupTest extends \PHPUnit_Framework_TestCase
+class DefaultGroupTest extends SidebarTestCase
 {
-    /**
-     * @var Illuminate\Contracts\Container\Container
-     */
-    protected $container;
 
     /**
      * @var DefaultGroup
@@ -23,8 +19,8 @@ class DefaultGroupTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->container = m::mock(Container::class);
-        $this->group     = new DefaultGroup($this->container);
+        $this->setContainer();
+        $this->group = new DefaultGroup($this->container);
     }
 
     public function test_can_instantiate_new_group()
@@ -46,7 +42,7 @@ class DefaultGroupTest extends \PHPUnit_Framework_TestCase
         $item = new DefaultItem($this->container);
         $this->group->addItem($item);
 
-        $serialized   = serialize($this->group);
+        $serialized = serialize($this->group);
         $unserialized = unserialize($serialized);
 
         $this->assertInstanceOf(Group::class, $unserialized);
@@ -54,8 +50,4 @@ class DefaultGroupTest extends \PHPUnit_Framework_TestCase
 
         $this->assertCount(1, $unserialized->getItems());
     }
-}
-
-class StubGroup extends DefaultGroup
-{
 }

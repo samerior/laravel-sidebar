@@ -2,12 +2,17 @@
 
 namespace Samerior\LaravelSidebar\Tests\Core;
 
+use Illuminate\Contracts\Container\Container;
 use Mockery as m;
 use Samerior\LaravelSidebar\Contracts\Append;
 use Samerior\LaravelSidebar\Library\Core\DefaultAppend;
-use Illuminate\Contracts\Container\Container;
+use Samerior\LaravelSidebar\Tests\SidebarTestCase;
 
-class DefaultAppendTest extends \PHPUnit_Framework_TestCase
+/**
+ * Class DefaultAppendTest
+ * @package Samerior\LaravelSidebar\Tests\Core
+ */
+class DefaultAppendTest extends SidebarTestCase
 {
     protected $container;
 
@@ -68,8 +73,4 @@ class DefaultAppendTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('url', $unserialized->getUrl());
         $this->assertEquals('icon', $unserialized->getIcon());
     }
-}
-
-class StubAppend extends DefaultAppend
-{
 }

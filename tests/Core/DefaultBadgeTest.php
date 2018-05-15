@@ -10,8 +10,6 @@ use Samerior\LaravelSidebar\Tests\Stubs\StubBadge;
 class DefaultBadgeTest extends SidebarTestCase
 {
 
-    protected $container;
-
     /**
      * @var DefaultBadge
      */

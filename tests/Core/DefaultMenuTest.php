@@ -140,7 +140,7 @@ class DefaultMenuTest extends SidebarTestCase
 
     protected function mockContainerMake($name = null, $weight = null)
     {
-        $mock = app(Group::class);
+        $mock = \Mockery::mock(Group::class);
         $mock->shouldReceive('name');
         $mock->shouldReceive('getName')->andReturn($name);
         $mock->shouldReceive('getWeight')->andReturn($weight);

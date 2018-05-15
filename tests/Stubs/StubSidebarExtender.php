@@ -25,7 +25,7 @@ class StubSidebarExtender implements SidebarExtender
      */
     public function extendWith(Menu $menu): Menu
     {
-        $container = m::mock(Container::class);
+        $container = \Mockery::mock(Container::class);
 
         $group = new DefaultGroup($container);
         $group->name('new from extender');

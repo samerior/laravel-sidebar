@@ -1,17 +1,24 @@
 <?php
+
 namespace Samerior\LaravelSidebar\Tests\Traits;
 
-use Samerior\LaravelSidebar\Traits\AuthorizableTrait;
+use Samerior\LaravelSidebar\Tests\SidebarTestCase;
+use Samerior\LaravelSidebar\Tests\Stubs\StubAuthorizableClass;
 
-class AuthorizableTraitTest extends \PHPUnit_Framework_TestCase
+/**
+ * Class AuthorizableTraitTest
+ * @package Samerior\LaravelSidebar\Tests\Traits
+ */
+class AuthorizableTraitTest extends SidebarTestCase
 {
     /**
-     * @var StubItemableClass
+     * @var
      */
     protected $routeable;
 
     protected function setUp()
     {
+        $this->setContainer();
         $this->routeable = new StubAuthorizableClass();
     }
 
@@ -25,7 +32,3 @@ class AuthorizableTraitTest extends \PHPUnit_Framework_TestCase
     }
 }
 
-class StubAuthorizableClass
-{
-    use AuthorizableTrait;
-}

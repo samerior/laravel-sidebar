@@ -9,19 +9,6 @@
 
 This is a Laravel Sidebar generator with authentication and works nicely with Bootstrap
 
-
-
-## Install
-
-Via Composer
-
-``` bash
-$ composer require samerior/laravel-sidebar
-```
-## Documentation
-
-See our documentation on [laravel-sidebar.samerior.com](https://laravel-sidebar.samerior.com)
-
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.

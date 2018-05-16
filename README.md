@@ -18,19 +18,9 @@ Via Composer
 ``` bash
 $ composer require samerior/laravel-sidebar
 ```
-## Assets
+## Documentation
 
-To publish the default views use:
-
-```php
-php artisan vendor:publish --tag="views"
-```
-
-To publish the config use:
-
-```php
-php artisan vendor:publish --tag="config"
-```
+See our documentation on [laravel-sidebar.samerior.com](https://laravel-sidebar.samerior.com)
 
 ## Change log
 

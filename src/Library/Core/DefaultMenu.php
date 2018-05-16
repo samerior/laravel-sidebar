@@ -21,7 +21,6 @@ use Samerior\LaravelSidebar\Traits\CallableTrait;
  */
 class DefaultMenu implements Menu, \Serializable
 {
-
     use CallableTrait, CacheableTrait, AuthorizableTrait;
 
     /**

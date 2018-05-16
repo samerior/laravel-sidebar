@@ -101,7 +101,6 @@ class LaravelSidebarServiceProvider extends ServiceProvider
     {
         // Bind SidebarResolver
         $this->app->bind(SidebarResolver::class, function (Application $app) {
-
             $resolver = SidebarResolverFactory::getClassName(
                 $app['config']->get($this->shortName . '.cache.method')
             );
@@ -111,7 +110,6 @@ class LaravelSidebarServiceProvider extends ServiceProvider
 
         // Bind SidebarFlusher
         $this->app->bind(SidebarFlusher::class, function (Application $app) {
-
             $resolver = SidebarFlusherFactory::getClassName(
                 $app['config']->get($this->shortName . '.cache.method')
             );

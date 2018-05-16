@@ -169,4 +169,3 @@ class DefaultItemTest extends SidebarTestCase
         return $mock;
     }
 }
-

@@ -15,5 +15,4 @@ use Samerior\LaravelSidebar\Library\Core\DefaultBadge;
  */
 class StubBadge extends DefaultBadge
 {
-
 }

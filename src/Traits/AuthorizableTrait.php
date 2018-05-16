@@ -6,6 +6,7 @@
  */
 
 namespace Samerior\LaravelSidebar\Traits;
+
 /**
  * Trait AuthorizableTrait
  * @package Samerior\LaravelSidebar\Library

@@ -15,5 +15,4 @@ use Samerior\LaravelSidebar\Library\Core\DefaultAppend;
  */
 class StubAppend extends DefaultAppend
 {
-
 }

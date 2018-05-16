@@ -15,5 +15,4 @@ use Samerior\LaravelSidebar\Library\Core\DefaultItem;
  */
 class StubItem extends DefaultItem
 {
-
 }

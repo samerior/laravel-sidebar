@@ -1,6 +1,7 @@
 <?php
 
 namespace Samerior\LaravelSidebar\Contracts;
+
 /**
  * Interface Append
  * @package Samerior\LaravelSidebar\Contracts

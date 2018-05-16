@@ -86,4 +86,3 @@ class ItemableTraitTest extends SidebarTestCase
         return $mock;
     }
 }
-

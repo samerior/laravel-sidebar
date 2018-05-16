@@ -7,7 +7,6 @@
 
 namespace Samerior\LaravelSidebar\Contracts;
 
-
 interface Item extends Itemable, Authorizable, Routeable
 {
     /**

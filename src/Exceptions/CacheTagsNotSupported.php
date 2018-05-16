@@ -6,11 +6,11 @@
  */
 
 namespace Samerior\LaravelSidebar\Exceptions;
+
 /**
  * Class CacheTagsNotSupported
  * @package Samerior\LaravelSidebar\Exceptions
  */
 class CacheTagsNotSupported extends \Exception
 {
-
 }

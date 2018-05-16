@@ -19,7 +19,7 @@ module.exports = {
             ['/guide/introduction', 'Introduction'],
             ['/about', 'About Samerior Group'],
             {
-                title: 'Guide',
+                title: 'Get Started',
                 collapsable: false,
                 children: [
                     ['/guide/installation', 'Installation'],
@@ -30,6 +30,7 @@ module.exports = {
                     ['/guide/extending', 'Extending the Sidebar']
                 ]
             },
+            ['/LICENSE', 'License'],
             {
                 title: 'Contributing',
                 children: [

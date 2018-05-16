@@ -43,4 +43,3 @@ class RouteableTraitTest extends SidebarTestCase
         $this->assertEquals('url', $this->routeable->getUrl());
     }
 }
-

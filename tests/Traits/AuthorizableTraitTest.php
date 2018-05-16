@@ -31,4 +31,3 @@ class AuthorizableTraitTest extends SidebarTestCase
         $this->assertFalse($this->routeable->isAuthorized());
     }
 }
-

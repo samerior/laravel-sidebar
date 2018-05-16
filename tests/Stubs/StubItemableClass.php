@@ -7,7 +7,6 @@
 
 namespace Samerior\LaravelSidebar\Tests\Stubs;
 
-
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\Collection;
 use Samerior\LaravelSidebar\Contracts\Itemable;

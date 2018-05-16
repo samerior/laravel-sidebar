@@ -7,8 +7,6 @@
 
 namespace Samerior\LaravelSidebar\Contracts;
 
-
 interface ShouldFlushCache
 {
-
 }

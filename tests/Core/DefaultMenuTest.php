@@ -2,7 +2,6 @@
 
 namespace Samerior\LaravelSidebar\Tests\Core;
 
-
 use Illuminate\Support\Collection;
 use Samerior\LaravelSidebar\Contracts\Group;
 use Samerior\LaravelSidebar\Contracts\Menu;
@@ -152,4 +151,3 @@ class DefaultMenuTest extends SidebarTestCase
         return $mock;
     }
 }
-

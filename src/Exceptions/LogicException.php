@@ -13,5 +13,4 @@ namespace Samerior\LaravelSidebar\Exceptions;
  */
 class LogicException extends \Exception
 {
-
 }

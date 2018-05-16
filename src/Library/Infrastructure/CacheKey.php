@@ -1,6 +1,7 @@
 <?php
 
 namespace Samerior\LaravelSidebar\Infrastructure;
+
 /**
  * Class CacheKey
  * @package Samerior\LaravelSidebar\Infrastructure

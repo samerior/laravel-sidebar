@@ -7,7 +7,6 @@
 
 namespace Samerior\LaravelSidebar\Tests\Core;
 
-
 use Illuminate\Support\Collection;
 use Samerior\LaravelSidebar\Contracts\Menu;
 use Samerior\LaravelSidebar\Library\Core\DefaultGroup;
@@ -44,7 +43,4 @@ class SidebarExtenderTest extends SidebarTestCase
         $this->assertInstanceOf(Collection::class, $this->menu->getGroups());
         $this->assertCount(2, $this->menu->getGroups());
     }
-
-
 }
-

@@ -15,5 +15,4 @@ use Samerior\LaravelSidebar\Library\Core\DefaultGroup;
  */
 class StubGroup extends DefaultGroup
 {
-
 }

@@ -7,7 +7,6 @@
 
 namespace Samerior\LaravelSidebar\Tests\Stubs;
 
-
 use Samerior\LaravelSidebar\Library\Core\DefaultMenu;
 
 /**
@@ -16,5 +15,4 @@ use Samerior\LaravelSidebar\Library\Core\DefaultMenu;
  */
 class StubMenu extends DefaultMenu
 {
-
 }

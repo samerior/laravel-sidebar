@@ -8,6 +8,9 @@
 namespace Samerior\LaravelSidebar\Library;
 
 use Illuminate\Contracts\Container\Container;
+use Samerior\LaravelSidebar\Contracts\SidebarFlusher;
+use Samerior\LaravelSidebar\Contracts\SidebarResolver;
+use Samerior\LaravelSidebar\Exceptions\LogicException;
 
 /**
  * Class SidebarManager
